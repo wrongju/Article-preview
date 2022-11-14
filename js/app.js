@@ -1,39 +1,34 @@
-let shareBlock = document.querySelector('.block-share');
-let share = document.querySelector('.share-bc');
-let share2 = document.querySelector('.share-bc2');
+let shareBlock = document.querySelector(".block-share")
+let share = document.querySelector(".share-bc")
+let share2 = document.querySelector(".share-bc2")
 
-
-
-
-// document.addEventListener('mouseup', event => {
-// 	if (!shareBlock.contains(event.target)) {
-// 		shareBlock.style.display = 'none';
-// 		share2.classList.remove('selected');
-// 		share.classList.remove('selected');
-// 	}
-// })
-
-// document.addEventListener('mouseup', event => {
-// 	if (share.contains(event.target)) {
-// 		shareBlock.style.display = 'none';
-// }})
-
-share.addEventListener('click', event => {
-	if (share.classList.contains('selected')) {
-		shareBlock.style.display = 'none';
-		share.classList.remove('selected');
+document.addEventListener("mouseup", (event) => {
+	// console.log(event.target)
+	if (event.target === share) {
+		// console.log(event.target)
+		if (share.classList.contains("selected")) {
+			shareBlock.style.display = "none"
+			share.classList.remove("selected")
+		} else {
+			shareBlock.style.display = "block"
+			share.classList.add("selected")
+		}
 	} else {
-		shareBlock.style.display = 'block';
-		share.classList.add('selected');
+		shareBlock.style.display = "none"
+		share.classList.remove("selected")
 	}
-})
 
-share2.addEventListener('click', event => {
-	if (share2.classList.contains('selected')) {
-		shareBlock.style.display = 'none';
-		share2.classList.remove('selected');
+	if (event.target === share2) {
+		console.log(event.target)
+		if (share2.classList.contains("selected")) {
+			shareBlock.style.display = "none"
+			share2.classList.remove("selected")
+		} else {
+			shareBlock.style.display = "block"
+			share2.classList.add("selected")
+		}
 	} else {
-		shareBlock.style.display = 'block';
-		share2.classList.add('selected');
+		// shareBlock.style.display = "none"
+		share2.classList.remove("selected")
 	}
 })

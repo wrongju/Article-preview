@@ -202,6 +202,11 @@ body {
 	.share-bc2 {
 		z-index: 2;
 		display: block;
+		cursor: pointer;
+	}
+
+	.share-bc2 svg {
+		pointer-events:none;
 	}
 
 	.share-bc2.selected path {
