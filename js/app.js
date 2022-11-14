@@ -26,5 +26,7 @@ share2.addEventListener('click', event => {
 document.addEventListener('mouseup', event => {
 	if (!shareBlock.contains(event.target)) {
 		shareBlock.style.display = 'none';
+		share2.classList.remove('selected');
+		share.classList.remove('selected');
 	}
 })
