@@ -3,6 +3,21 @@ let share = document.querySelector('.share-bc');
 let share2 = document.querySelector('.share-bc2');
 
 
+
+
+// document.addEventListener('mouseup', event => {
+// 	if (!shareBlock.contains(event.target)) {
+// 		shareBlock.style.display = 'none';
+// 		share2.classList.remove('selected');
+// 		share.classList.remove('selected');
+// 	}
+// })
+
+// document.addEventListener('mouseup', event => {
+// 	if (share.contains(event.target)) {
+// 		shareBlock.style.display = 'none';
+// }})
+
 share.addEventListener('click', event => {
 	if (share.classList.contains('selected')) {
 		shareBlock.style.display = 'none';
@@ -20,13 +35,5 @@ share2.addEventListener('click', event => {
 	} else {
 		shareBlock.style.display = 'block';
 		share2.classList.add('selected');
-	}
-})
-
-document.addEventListener('mouseup', event => {
-	if (!shareBlock.contains(event.target)) {
-		shareBlock.style.display = 'none';
-		share2.classList.remove('selected');
-		share.classList.remove('selected');
 	}
 })
