@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: hsl(213, 44%, 95%);
+	font-family: 'Manrope', sans-serif;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	max-width: 730px;
+	display: flex;
+	background-color: white;
+	justify-content: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 63px -12px rgba(0, 0, 0, 0.62);
+
+}
+
+.wrapper-img {
+	flex: 0 1 38%;
+	background-size: cover;
+	background-image: url('../images/drawers.jpg');
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.wrapper-card {
+	flex: 0 1 62%;
+	padding: 30px 42px;
+}
+
+.card-title {
+	font-size: 20px;
+	color: hsl(217, 19%, 35%);
+}
+
+.card-paragraph {
+	font-size: 13px;
+	color: hsla(217, 19%, 35%, 0.750);
+	margin-top: 15px;
+}
+
+.card-portfolio {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+	position: relative;
+}
+
+.portfolio-title {
+	font-size: 14px;
+}
+
+.card-michelle {
+	display: flex;
+	gap: 15px;
+}
+
+.portfolio-paragraph {
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.454);
+}
+
+.avatar {
+	width: 40px;
+	border-radius: 99px;
+}
+
+.icon {
+	cursor: pointer;
+}
+
+.share-bc {
+	background-color: hsl(210, 46%, 95%);
+	background-image: url('../images/icon-share.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 15px 15px;
+	border-radius: 21.5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.share-bc2 {
+	background-color: hsl(210, 46%, 95%);
+	padding: 9px 12px;
+	border-radius: 21.5px;
+	display: none;
+}
+
+.block-share {
+	position: absolute;
+	top: -70px;
+	left: 251px;
+	display: none;
+}
+
+.text-share {
+	letter-spacing: 3px;
+	font-size: 12px;
+}
+
+.one-cube {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(217, 19%, 35%);
+	color: rgba(255, 255, 255, 0.511);
+	gap: 16px;
+	padding: 15px 25px;
+	border-radius: 7px;
+	position: relative;
+	z-index: 1;
+}
+
+.two-cube {
+	width: 40px;
+	height: 40px;
+	background-color: hsl(217, 19%, 35%);
+	position: absolute;
+	top: 12px;
+	left: 81px;
+	z-index: 0;
+	transform: rotate(135deg);
+	display: flex;
+}
+
+@media screen and (max-width: 800px) {
+	.wrapper {
+		flex-direction: column;
+		max-width: 340px;
+		align-items: center;
+		position: relative;
+	}
+
+	.card-title {
+		font-size: 17px;
+	}
+
+	.card-paragraph {
+		font-size: 14px;
+		margin-bottom: 35px;
+	}
+
+	.wrapper-img {
+		flex: none;
+		width: 100%;
+		height: 230px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+	.wrapper-card {
+		flex: none;
+		padding: 35px 33px 15px 33px;
+	}
+
+	.block-share {
+		position: absolute;
+		bottom: -15px;
+		left: -32px;
+		top: unset;
+		z-index: 0;
+		width: calc(100% + 65px);
+		display: none;
+	}
+
+	.one-cube {
+		justify-content: flex-start;
+		gap: 20px;
+		padding: 25px 35px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+	}
+
+	.two-cube {
+		display: none;
+	}
+
+	.card-portfolio {
+		margin-top: 20px;
+	}
+
+	.share-bc {
+		display: none;
+	}
+
+	.share-bc2 {
+		z-index: 2;
+		display: block;
+	}
+
+	.share-bc2.selected path {
+		fill: white;
+	}
+
+	.share-bc2.selected {
+		background-color: hsl(214, 17%, 51%);
+	}
+
+	.text-share {
+		letter-spacing: 3px;
+		font-size: 13px;
+	}
+
+}
